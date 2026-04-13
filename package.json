@@ -1,0 +1,28 @@
+{
+  "name": "elastic-sense",
+  "version": "1.2.2",
+  "private": true,
+  "description": "Elastic workflows for Claude Code with Agent Builder as the primary mode and a deprecated legacy fallback",
+  "scripts": {
+    "validate": "node scripts/validate-plugin.js",
+    "test": "npm run test:smoke",
+    "test:smoke": "node scripts/test-smoke.js"
+  },
+  "keywords": [
+    "elastic",
+    "elasticsearch",
+    "kibana",
+    "agent-builder",
+    "legacy-mcp",
+    "mcp",
+    "claude-code"
+  ],
+  "author": "Abdelhamid Benmeziane",
+  "license": "MIT",
+  "dependencies": {
+    "mcp-remote": "0.1.16"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "elastic-sense",
+  "version": "1.2.2",
+  "description": "Elastic workflows for Claude Code with Agent Builder as the primary mode and a deprecated legacy fallback.",
+  "author": {
+    "name": "Abdelhamid Benmeziane",
+    "email": "ahmidbbc@gmail.com"
+  },
+  "homepage": "https://github.com/ahmidbbc/elastic-sense.git",
+  "repository": "https://github.com/ahmidbbc/elastic-sense.git",
+  "license": "MIT",
+  "keywords": [
+    "elastic",
+    "elasticsearch",
+    "kibana",
+    "agent-builder",
+    "legacy-mcp",
+    "observability",
+    "monitoring",
+    "logs",
+    "sre"
+  ],
+  "mcpServers": "./config/mcp.json",
+  "userConfig": {
+    "use_legacy_direct_mode": {
+      "title": "Use Legacy Direct Mode",
+      "description": "Enable the deprecated elastic/mcp-server-elasticsearch fallback instead of Elastic Agent Builder. Keep false for new installations.",
+      "type": "boolean",
+      "sensitive": false
+    },
+    "elastic_mcp_url": {
+      "title": "Elastic MCP URL",
+      "description": "Full Elastic Agent Builder MCP URL copied from Kibana. Ignored when legacy direct mode is enabled.",
+      "type": "string",
+      "sensitive": false
+    },
+    "elastic_api_key": {
+      "title": "Elastic API Key",
+      "description": "Elastic API key. In Agent Builder mode it needs Kibana Agent Builder privileges; in legacy direct mode it is sent directly to Elasticsearch.",
+      "type": "string",
+      "sensitive": true
+    },
+    "legacy_es_url": {
+      "title": "Legacy Elasticsearch URL",
+      "description": "Direct Elasticsearch URL used only when legacy direct mode is enabled.",
+      "type": "string",
+      "sensitive": false
+    },
+    "legacy_es_ssl_skip_verify": {
+      "title": "Legacy Skip TLS Verification",
+      "description": "Only used in legacy direct mode. Enable true only for development or controlled environments with invalid certificates.",
+      "type": "boolean",
+      "sensitive": false
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "elastic-sense-marketplace",
+  "owner": {
+    "name": "Abdelhamid Benmeziane",
+    "email": "ahmidbbc@gmail.com"
+  },
+  "metadata": {
+    "description": "Elastic workflows for Claude Code with Agent Builder as the primary mode and a deprecated legacy fallback",
+    "version": "1.2.2"
+  },
+  "plugins": [
+    {
+      "name": "elastic-sense",
+      "source": "./",
+      "description": "Workflow skills for Elastic investigations through Agent Builder, with a deprecated direct Elasticsearch fallback.",
+      "author": {
+        "name": "Abdelhamid Benmeziane",
+        "email": "ahmidbbc@gmail.com"
+      },
+      "homepage": "https://github.com/ahmidbbc/elastic-sense.git",
+      "repository": "https://github.com/ahmidbbc/elastic-sense.git",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": [
+        "elastic",
+        "observability",
+        "logs",
+        "sre"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "elastic-agent-builder": {
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/scripts/start-mcp.js"
+      ],
+      "env": {
+        "USE_LEGACY_DIRECT_MODE": "${user_config.use_legacy_direct_mode}",
+        "ELASTIC_MCP_URL": "${user_config.elastic_mcp_url}",
+        "ELASTIC_API_KEY": "${user_config.elastic_api_key}",
+        "LEGACY_ES_URL": "${user_config.legacy_es_url}",
+        "LEGACY_ES_SSL_SKIP_VERIFY": "${user_config.legacy_es_ssl_skip_verify}"
+      }
+    }
+  }
+}

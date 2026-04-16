@@ -10,16 +10,17 @@ For end users, the setup flow stays the same in both modes: install the plugin, 
 
 This is the recommended path for new installations.
 
-- Connects Claude to Kibana's Agent Builder MCP endpoint
+- Connects Claude to the MCP endpoint hosted by Kibana's Agent Builder
 - Authenticates with an Elastic API key sent as `Authorization: ApiKey ...`
 - Uses `mcp-remote` locally and stores the bridge dependency in `${CLAUDE_PLUGIN_DATA}`
+- Does not start a full local MCP server beyond that lightweight bridge
 
 ### Compatibility fallback: legacy direct mode
 
 This mode exists only for older stacks or environments where Agent Builder is not available.
 
 - Uses the deprecated `elastic/mcp-server-elasticsearch` server
-- Starts the server through `docker.elastic.co/mcp/elasticsearch`
+- Starts that MCP server locally through `docker.elastic.co/mcp/elasticsearch`
 - Connects directly to Elasticsearch with `ES_URL`, and optionally `ES_API_KEY`
 - Requires Docker on the local machine
 

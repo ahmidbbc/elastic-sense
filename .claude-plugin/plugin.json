@@ -23,14 +23,14 @@
   "mcpServers": "./config/mcp.json",
   "userConfig": {
     "use_legacy_direct_mode": {
-      "title": "Use Legacy Direct Mode",
-      "description": "Enable the deprecated elastic/mcp-server-elasticsearch fallback instead of Elastic Agent Builder. Keep false for new installations.",
+      "title": "Use Local Legacy MCP Fallback",
+      "description": "Runs the deprecated Elasticsearch MCP server locally through Docker. Use only if your Kibana deployment does not expose the Agent Builder MCP endpoint.",
       "type": "boolean",
       "sensitive": false
     },
     "elastic_mcp_url": {
       "title": "Elastic MCP URL",
-      "description": "Full Elastic Agent Builder MCP URL copied from Kibana. Ignored when legacy direct mode is enabled.",
+      "description": "URL of the MCP endpoint already exposed by Kibana Agent Builder. This is the recommended remote mode. Ignored when legacy direct mode is enabled.",
       "type": "string",
       "sensitive": false
     },
